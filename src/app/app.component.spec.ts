@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'ventanilla_unica'`, () => {
+  it(`should have as title 'already_done_components'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('ventanilla_unica');
+    expect(app.title).toEqual('already_done_components');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('ventanilla_unica app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('already_done_components app is running!');
   });
 });
