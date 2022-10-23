@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 //import { MatIconModule } from '@angular/material/icon';
 import { LandingComponent } from './landing.component';
 
@@ -7,7 +8,7 @@ import { LandingComponent } from './landing.component';
     LandingComponent
   ],
   imports: [
-    //MatIconModule
+    MatIconModule
   ],
   exports: [LandingComponent],
   providers: [],

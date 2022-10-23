@@ -3,7 +3,6 @@ import { NavBarComponent } from './nav-bar.component';
 
 @NgModule({
   declarations: [
-    NavBarComponent
   ],
   imports: [],
   providers: [],

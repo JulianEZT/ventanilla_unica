@@ -2,11 +2,68 @@
     background-color: #004884
     border: 1px solid white
     position: fixed
-    float: right
-    display: flex
-    flex-direction: column
-    justify-content: space-evenly
-    height: 20vh
-    color: white
+    right: 0
+    margin-top: 35vh
+    height: 30vh
+    width: 4rem
     border-radius: 15px
-    .icon
+    overflow: visible
+    .option
+        position: fixed
+        height: 9vh
+        width: 4rem
+        display: flex
+        flex-direction: column
+        justify-content: center
+        transition: width 0.5s
+        right: 0
+        &:hover
+            cursor: pointer
+            background-color: #65ade8
+            border-top-left-radius: 15px
+            border-bottom-left-radius: 15px
+            position: fixed
+            width: 12rem
+            height: 9vh
+            display: flex
+            flex-direction: row
+            justify-content: flex-start
+            gap: 1rem
+            z-index: 3
+            right: 0
+            label
+                font-family: sans-serif
+                display: block
+                color: white
+                margin-top: auto
+                margin-bottom: auto
+                font-size: 20px
+                font-weight: 600
+        span
+            height: 2rem
+            width: 2rem
+            margin-top: auto
+            margin-bottom: auto
+            margin-left: 1rem
+            background-color: white
+            border-radius: 15px
+            display: flex
+            flex-direction: column
+            justify-content: center
+            .icon
+                height: 1rem
+                width: 1rem
+                margin-left: auto
+                margin-right: auto
+                color: #004884
+        label
+            display: none
+        
+    .light
+        margin-top: 1.5vh
+    .increase
+        margin-top: 10.5vh
+    .decrease
+        margin-top: 19.5vh
+        
+        
