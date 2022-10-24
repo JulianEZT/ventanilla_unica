@@ -3,6 +3,48 @@
     height: 30vh
     display: flex
     flex-direction: row
-    justify-content: space-around
+    justify-content: center
+    gap: 2vw
     background-color: #3366cc
     bottom: 0
+    padding: 20px
+    color: white
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+    overflow: hidden
+
+    @media (max-width: 1500px)
+        flex-direction: column-reverse
+        height: auto
+        padding-left: 4vw
+        .separador
+            border-bottom: 1px solid white
+
+    @media (max-width: 1200px)
+        .second
+            .media
+                flex-direction: column
+
+        .separador
+            border: 0
+    .separador
+        border-left: 1px solid white
+
+    .first
+        width: 25%
+
+    .second
+        width: 40%
+    
+    .third
+        width: 25%
+
+    .media
+        display: flex
+        flex-direction: row
+        justify-content: center
+        span
+            display: flex
+            flex-direction: row
+            gap: 1rem

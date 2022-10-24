@@ -1,20 +1,72 @@
 <div class="header" id="header">
     <div class="gov-co" id="gov-co">
+        <span *ngIf="responsive" (click)="changeOpen()">
+            <mat-icon class="icon">menu</mat-icon>
+        </span>
         <img src="../../../assets/images/gov-co.png" alt="">
-        <button>Cambiar idioma</button>
     </div>
-    <div class="banner" id="banner">
-        <img src="../../../assets/images/logo.png" alt="">
+    <div *ngIf="!responsive" class="banner" id="banner">
+        <div class="img-container">
+            <img src="../../../assets/images/logo.png" alt="">
+        </div>
+        <div class="actions" id="actions">
+            <input type="text">
+            <span>
+                <mat-icon class="icon">search</mat-icon>
+            </span>
+        </div>
     </div>
-    <div class="menu" id="menu">
+    <responsive-nav-bar *ngIf="responsive" [open]="open" [changeOpen]="changeOpen"></responsive-nav-bar>
+    <div *ngIf="!responsive" class="menu" id="menu">
         <img src="../../../assets/images/chair.png" alt="">
         <div class="buttons">
-            <div class="boton" (click)="click()"><p> Indersantander</p></div>
-            <div class="boton"><p>Financiera</p></div>
-            <div class="boton"><p>PQRS</p></div>
-            <div class="boton"><p>Procesos misionales</p></div>
-            <div class="boton"><p>Gestión</p></div>
-            <div class="boton"><p>Transparencia</p></div>
+            <div class="boton" [matMenuTriggerFor]="menu1">
+                <p> Indersantander</p>
+            </div>
+            <mat-menu class="mat-menu" #menu1="matMenu">
+                <button mat-menu-item>Certificación de existencia</button>
+                <button mat-menu-item>Certificación de existencia</button>
+                <button mat-menu-item>Certificación de existencia</button>
+            </mat-menu>
+            <div class="boton" [matMenuTriggerFor]="menu2">
+                <p>Financiera</p>
+            </div>
+            <mat-menu class="mat-menu" #menu2="matMenu">
+                <button mat-menu-item>Certificación de existencia</button>
+                <button mat-menu-item>Certificación de existencia</button>
+            </mat-menu>
+            <div class="boton" [matMenuTriggerFor]="menu3">
+                <p>PQRS</p>
+            </div>
+            <mat-menu class="mat-menu" #menu3="matMenu">
+                <button mat-menu-item>Certificación de existencia</button>
+                <button mat-menu-item>Certificación de existencia</button>
+                <button mat-menu-item>Certificación de existencia</button>
+            </mat-menu>
+            <div class="boton" [matMenuTriggerFor]="menu4">
+                <p>Procesos misionales</p>
+            </div>
+            <mat-menu class="mat-menu" #menu4="matMenu">
+                <button mat-menu-item>Certificación de existencia</button>
+                <button mat-menu-item>Certificación de existencia</button>
+                <button mat-menu-item>Certificación de existencia</button>
+            </mat-menu>
+            <div class="boton" [matMenuTriggerFor]="menu5">
+                <p>Gestión</p>
+            </div>
+            <mat-menu class="mat-menu" #menu5="matMenu">
+                <button mat-menu-item>Certificación de existencia</button>
+                <button mat-menu-item>Certificación de existencia</button>
+                <button mat-menu-item>Certificación de existencia</button>
+            </mat-menu>
+            <div class="boton" [matMenuTriggerFor]="menu6">
+                <p>Transparencia</p>
+            </div>
+            <mat-menu class="mat-menu" #menu6="matMenu">
+                <button mat-menu-item>Certificación de existencia</button>
+                <button mat-menu-item>Certificación de existencia</button>
+                <button mat-menu-item>Certificación de existencia</button>
+            </mat-menu>
         </div>
     </div>
 </div>

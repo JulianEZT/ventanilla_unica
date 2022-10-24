@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input, OnChanges, SimpleChanges } from "@angular/core";
 
 @Component({
     selector: 'nav-bar',
@@ -6,7 +6,11 @@ import { Component } from "@angular/core";
     templateUrl: 'nav-bar.component.html'
 })
 export class NavBarComponent{
-    click() {
-        console.log('hola')
+    @Input() responsive!: boolean
+    open = false
+
+    changeOpen(){
+        console.log(this.open)
+        this.open = !this.open
     }
 }
