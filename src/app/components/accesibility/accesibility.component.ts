@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { AccesibilityService } from "./accesibility.service";
 
 @Component({
     selector: 'accesibility',
@@ -6,5 +7,6 @@ import { Component } from "@angular/core";
     templateUrl: 'accesibility.component.html'
 })
 export class AccesibilityComponent{
-
+    constructor(private acessibilityService: AccesibilityService){
+    }
 }

@@ -1,0 +1,16 @@
+{
+   "menu": {
+      "item1": "Indersantander",
+      "item2": "Financial",
+      "item3": "PQRS",
+      "item4": "Missional processes",
+      "item5": "Management",
+      "item6": "Transparency"
+   },
+   "pages": {
+      "landing": {
+         "noticias": "NEWS",
+         "noticiasDescription": "GET THE LATEST NEWS"
+      }
+   }
+}

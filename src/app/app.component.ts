@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LandingComponent } from './pages/landing/landing.component';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,10 @@ import { LandingComponent } from './pages/landing/landing.component';
 export class AppComponent {
   title = 'already_done_components';
   responsive: boolean;
-  constructor() {
+  constructor(translate: TranslateService) {
+    translate.setDefaultLang('en');
+   translate.use('es');
+
     window.onscroll = this.onScroll;
     window.onresize = this.onResize.bind(this);
     this.responsive = (window.screen.width < 1300) ? true : false;

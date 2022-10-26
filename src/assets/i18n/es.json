@@ -1,0 +1,16 @@
+{
+    "menu": {
+       "item1": "Indersantander",
+       "item2": "Financiera",
+       "item3": "PQRS",
+       "item4": "Procesos misionales",
+       "item5": "Gestión",
+       "item6": "Transparencia"
+    },
+    "pages": {
+       "landing": {
+          "noticias": "NOTICIAS",
+          "noticiasDescription": "Enterate de las últimas noticias"
+       }
+    }
+ }
