@@ -28,53 +28,95 @@
     <div *ngIf="!responsive" class="menu" id="menu">
         <img src="../../../assets/images/chair.png" alt="">
         <div class="buttons">
-            <div class="boton" >
-                <p [matMenuTriggerFor]="menu1">{{'menu.item1' | translate}}</p>
+            <div class="boton">
+                <p>{{'menu.item1' | translate}}</p>
             </div>
-            <mat-menu class="mat-menu" #menu1="matMenu">
-                <button mat-menu-item>Certificación de existencia</button>
-                <button mat-menu-item>Certificación de existencia</button>
-                <button mat-menu-item>Certificación de existencia</button>
-            </mat-menu>
-            <div class="boton" >
-                <p [matMenuTriggerFor]="menu2">{{'menu.item2' | translate}}</p>
+            <div class="boton">
+                <p>{{'menu.item2' | translate}}</p>
             </div>
-            <mat-menu class="mat-menu" #menu2="matMenu">
-                <button mat-menu-item>Certificación de existencia</button>
-                <button mat-menu-item>Certificación de existencia</button>
-            </mat-menu>
-            <div class="boton" >
-                <p [matMenuTriggerFor]="menu3">{{'menu.item3' | translate}}</p>
+            <div class="boton" (click)="(currentOption === 3)?currentOption=0:currentOption = 3">
+                <p>{{'menu.item3' | translate}}</p>
             </div>
-            <mat-menu class="mat-menu" #menu3="matMenu">
-                <button mat-menu-item>Certificación de existencia</button>
-                <button mat-menu-item>Certificación de existencia</button>
-                <button mat-menu-item>Certificación de existencia</button>
-            </mat-menu>
-            <div class="boton" >
-                <p [matMenuTriggerFor]="menu4">{{'menu.item4' | translate}}</p>
+            <div class="boton" (click)="(currentOption === 4)?currentOption=0:currentOption = 4">
+                <p>{{'menu.item4' | translate}}</p>
             </div>
-            <mat-menu class="mat-menu" #menu4="matMenu">
-                <button mat-menu-item>Certificación de existencia</button>
-                <button mat-menu-item>Certificación de existencia</button>
-                <button mat-menu-item>Certificación de existencia</button>
-            </mat-menu>
-            <div class="boton" >
-                <p [matMenuTriggerFor]="menu5">{{'menu.item5' | translate}}</p>
+            <div class="boton">
+                <p>{{'menu.item5' | translate}}</p>
             </div>
-            <mat-menu class="mat-menu" #menu5="matMenu">
-                <button mat-menu-item>Certificación de existencia</button>
-                <button mat-menu-item>Certificación de existencia</button>
-                <button mat-menu-item>Certificación de existencia</button>
-            </mat-menu>
-            <div class="boton" >
-                <p [matMenuTriggerFor]="menu6">{{'menu.item6' | translate}}</p>
+            <div class="boton">
+                <p>{{'menu.item6' | translate}}</p>
             </div>
-            <mat-menu class="mat-menu" #menu6="matMenu">
-                <button mat-menu-item>Certificación de existencia</button>
-                <button mat-menu-item>Certificación de existencia</button>
-                <button mat-menu-item>Certificación de existencia</button>
-            </mat-menu>
+            <div class="boton">
+                <p>{{'menu.item7' | translate}}</p>
+            </div>
+        </div>
+    </div>
+    <div [hidden]="currentOption === 0" class="opciones">
+        <div *ngIf="currentOption === 4" class="submenu">
+            <div>
+                <a href="http://visor.suit.gov.co/VisorSUIT/index.jsf?FI=51620"><p>{{'menu.Tramites.item1' | translate}}</p></a>
+            </div>
+            <hr>
+            <div>
+                <a href="http://visor.suit.gov.co/VisorSUIT/index.jsf?FI=51615"><p>{{'menu.Tramites.item2' | translate}}</p></a>
+            </div>
+            <hr>
+            <div>
+                <a href="http://visor.suit.gov.co/VisorSUIT/index.jsf?FI=51611"><p>{{'menu.Tramites.item3' | translate}}</p></a>
+            </div>
+            <hr>
+            <div>
+                <a href="http://visor.suit.gov.co/VisorSUIT/index.jsf?FI=16069"><p>{{'menu.Tramites.item4' | translate}}</p></a>
+            </div>
+            <hr>
+            <div>
+                <a href="http://visor.suit.gov.co/VisorSUIT/index.jsf?FI=51613"><p>{{'menu.Tramites.item5' | translate}}</p></a>
+            </div>
+            <hr>
+            <div>
+                <a href="http://visor.suit.gov.co/VisorSUIT/index.jsf?FI=51614"><p>{{'menu.Tramites.item6' | translate}}</p></a>
+            </div>
+            <hr>
+            <div>
+                <a href="http://visor.suit.gov.co/VisorSUIT/index.jsf?FI=16070"><p>{{'menu.Tramites.item7' | translate}}</p></a>
+            </div>
+        </div>
+        <div style="width: 40vw;" *ngIf="currentOption === 3" class="submenu">
+            <div>
+                <p (click)="currentOption=0" [routerLink]="'pqr'">{{'menu.PQR.item1' | translate}}</p>
+            </div>
+            <hr>
+            <div>
+                <p (click)="currentOption=0" [routerLink]="'pqr'">{{'menu.PQR.item2' | translate}}</p>
+            </div>
+            <hr>
+            <div>
+                <p (click)="currentOption=0" [routerLink]="'pqr'">{{'menu.PQR.item3' | translate}}</p>
+            </div>
+            <hr>
+            <div>
+                <p (click)="currentOption=0" [routerLink]="'pqr'">{{'menu.PQR.item4' | translate}}</p>
+            </div>
+            <hr>
+            <div>
+                <p (click)="currentOption=0" [routerLink]="'pqr'">{{'menu.PQR.item5' | translate}}</p>
+            </div>
+            <hr>
+            <div>
+                <p (click)="currentOption=0" [routerLink]="'pqr'">{{'menu.PQR.item6' | translate}}</p>
+            </div>
+            <hr>
+            <div>
+                <p (click)="currentOption=0" [routerLink]="'pqr'">{{'menu.PQR.item7' | translate}}</p>
+            </div>
+            <hr>
+            <div>
+                <p (click)="currentOption=0" [routerLink]="'pqr'">{{'menu.PQR.item8' | translate}}</p>
+            </div>
+        </div>
+        <div class="ilustracion">
+            <img *ngIf="currentOption === 3" src="../../../assets/images/pqrs.jpg" alt="">
+            <img *ngIf="currentOption === 4" src="../../../assets/images/tramites.png" alt="">
         </div>
     </div>
 </div>

@@ -2,17 +2,17 @@
     hola
 </div>
 <div class="page-1">
-    <ngb-carousel class="carousel">
+    <ngb-carousel class="carousel" [pauseOnHover]="true">
         <ng-template ngbSlide *ngFor="let image of images">
-          <div class="wrapper">
-            <img [src]="image.src" alt="Random first slide">
-          </div>
-          <div class="carousel-caption">
-            <h3>{{ image.title }}</h3>
-            <p>{{ image.short }}</p>
-          </div>
+            <div class="wrapper">
+                <img [src]="image.src" alt="Random first slide">
+            </div>
+            <div class="carousel-caption">
+                <h3>{{ image.title }}</h3>
+                <p>{{ image.short }}</p>
+            </div>
         </ng-template>
-      </ngb-carousel>
+    </ngb-carousel>
 </div>
 <div class="page-2">
     <iframe width="100%" height="480" src="https://www.youtube.com/embed/q3bxXh8aalw"
@@ -47,7 +47,8 @@
     <div class="cuerpo">
         <div class="section">
             <div class="imagen">
-                <img src="../../../assets/images/marco-amarillo.png" alt="">
+                <img class="marco" src="../../../assets/images/marco-amarillo.png" alt="">
+                <img class="persona" src="../../../assets/images/persona.png" alt="">
             </div>
             <div class="texto">
                 <p>TEXTO</p>
@@ -80,11 +81,17 @@
         </div>
         <div class="section">
             <div class="imagen">
-                <img src="../../../assets/images/marco-green.png" alt="">
+                <img class="marco" src="../../../assets/images/marco-green.png" alt="">
+                <img class="persona" src="../../../assets/images/persona.png" alt="">
             </div>
             <div class="texto">
                 <p>TEXTO</p>
-                <button>Descargar archivo</button>
+                <button style="
+                background-image: linear-gradient(to right, white, green);
+                border-bottom: 1vh solid green; border-top: 1px solid green;
+                border-left: 1px solid green;
+                border-right: 1px solid green;
+                color: black;">Descargar archivo</button>
                 <div class="separador">
                     <div class="hr1"></div>
                     <div class="hr2"></div>
@@ -107,11 +114,17 @@
         </div>
         <div class="section">
             <div class="imagen">
-                <img src="../../../assets/images/marco-red.png" alt="">
+                <img class="marco" src="../../../assets/images/marco-red.png" alt="">
+                <img class="persona" src="../../../assets/images/persona.png" alt="">
             </div>
             <div class="texto">
                 <p>TEXTO</p>
-                <button>Descargar archivo</button>
+                <button style="
+                background-image: linear-gradient(to right, white, red);
+                border-bottom: 1vh solid red; border-top: 1px solid red;
+                border-left: 1px solid red;
+                border-right: 1px solid red;
+                color: white;">Descargar archivo</button>
                 <div class="separador">
                     <div class="hr1"></div>
                     <div class="hr2"></div>
@@ -134,11 +147,18 @@
         </div>
         <div class="section">
             <div class="imagen">
-                <img src="../../../assets/images/marco-black.png" alt="">
+                <img class="marco" src="../../../assets/images/marco-black.png" alt="">
+                <img class="persona" src="../../../assets/images/persona.png" alt="">
             </div>
             <div class="texto">
                 <p>TEXTO</p>
-                <button>Descargar archivo</button>
+                <button style="
+                background-image: linear-gradient(to right, white, black);
+                border-bottom: 1vh solid black; border-top: 1px solid black;
+                border-left: 1px solid black;
+                border-right: 1px solid black;
+                color: white;
+                ">Descargar archivo</button>
                 <div class="separador">
                     <div class="hr1"></div>
                     <div class="hr2"></div>

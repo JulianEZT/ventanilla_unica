@@ -3,9 +3,29 @@
       "item1": "Indersantander",
       "item2": "Financial",
       "item3": "PQRS",
-      "item4": "Missional processes",
-      "item5": "Management",
-      "item6": "Transparency"
+      "item4": "tramites",
+      "item5": "Missional processes",
+      "item6": "Management",
+      "item7": "Transparency",
+      "Tramites": {
+         "item1": "Certification of existence and legal representation of sports leagues and associations",
+         "item2": "Cancellation of the legal status of sports leagues and clubs",
+         "item3": "Approval of statutory reforms of sports and/or recreational organizations linked to the national sports system",
+         "item4": "Renewal of sports recognition to sports clubs, promoter clubs and clubs belonging to non-sports entities",
+         "item5": "Recognition of the legal status of sports and recreational organizations linked to the National Sports System",
+         "item6": "Registration of dignitaries of sports and recreational organizations linked to the National Sports System",
+         "item7": "Sports recognition to sports clubs, promoter clubs and clubs belonging to non-sports entities"
+       },
+       "PQR": {
+         "item1": "Petitions",
+         "item2": "Complain",
+         "item3": "anonymous complaint",
+         "item4": "claims",
+         "item5": "request for copies",
+         "item6": "Petitioner",
+         "item7": "thanks or congratulations",
+         "item8": "Comments or suggestions"
+       }
    },
    "pages": {
       "landing": {

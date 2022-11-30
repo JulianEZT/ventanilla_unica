@@ -3,9 +3,29 @@
        "item1": "Indersantander",
        "item2": "Financiera",
        "item3": "PQRS",
-       "item4": "Procesos misionales",
-       "item5": "Gestión",
-       "item6": "Transparencia"
+       "item4": "tramites",
+       "item5": "Procesos misionales",
+       "item6": "Gestión",
+       "item7": "Transparencia",
+       "Tramites": {
+         "item1": "Certificación de existencia y representación legal de las ligas y asociaciones deportivas",
+         "item2": "Cancelación de la personería jurídica de ligas y clubes deportivos",
+         "item3": "Aprobación de las reformas estatuarias de los organismos deportivos y/o recreativos vinculados al sistema nacional del deporte",
+         "item4": "Renovación del reconocimiento deportivo a clubes deportivos, clubes promotores y clubes pertenecientes a entidades no deportivas",
+         "item5": "Reconocimiento de la personería jurídica de los organismos deportivos y recreativos vinculados al sistema Nacional del deporte",
+         "item6": "Inscripción de dignatarios de los organismos deportivos y recreativos vinculados al Sistema Nacional del Deporte",
+         "item7": "Reconocimiento deportivo a clubes deportivos, clubes promotores y clube spertenecientes a entidades no deportivas"
+       },
+       "PQR": {
+         "item1": "Peticiones",
+         "item2": "Queja",
+         "item3": "Queja anonima",
+         "item4": "Reclamos",
+         "item5": "Solicitud de copias",
+         "item6": "Peticionario",
+         "item7": "Agradecimiento o felicitación",
+         "item8": "Comentarios o sugerencias"
+       }
     },
     "pages": {
        "landing": {

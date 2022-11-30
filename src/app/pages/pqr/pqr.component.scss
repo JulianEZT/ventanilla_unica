@@ -1,0 +1,167 @@
+.space {
+    width: 100%;
+    height: 28vh;
+}
+
+.content {
+    background-color: white;
+
+    .titulo {
+        font-weight: 800;
+        font-size: 2vw;
+        color: #3B8FDE
+    }
+
+    .que-hacemos {
+        font-size: 1vw;
+        color: #464848;
+        font-family: sans-serif;
+    }
+
+    .pqr {
+        padding: 3vw;
+        width: 100%;
+
+        form {
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 5px;
+            margin-top: 1rem;
+            width: 80%;
+            padding: 1rem;
+            box-shadow: 0px 0px 1px;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            background-color: white;
+
+            .solicitud {
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+
+
+
+                .tipos-solicitudes:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .tipos-solicitudes {
+                color: #3B8FDE;
+                font-size: 12;
+                z-index: 5;
+            }
+
+            .dropzone {
+                width: 100%;
+                height: 25vh;
+
+                .dropzone-label {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 1rem;
+
+                    img {
+                        height: 100%;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+
+                    p {
+                        font-family: sans-serif;
+                        color: black;
+                        text-align: center;
+                    }
+                }
+            }
+
+            div {
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+            }
+
+            .terminos {
+                input {
+                    width: 20px;
+                    height: 20px;
+                    border: 0;
+                    accent-color: #7525B7;
+                }
+            }
+
+            a {
+                text-decoration: underline;
+                color: #3B8FDE;
+            }
+
+            ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+                color: gray !important;
+            }
+
+            .disabled-parent:has(.disabled) {
+                ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+                    background-color: #ededed;
+                }
+            }
+
+            .disabled-parent {
+                width: 100%;
+            }
+
+            .input-group {
+                width: 100%;
+                border-radius: 5px;
+                font-size: 1vw;
+            }
+
+            .textarea-group {
+                width: 100%;
+                border-radius: 5px;
+                font-size: 1vw;
+            }
+
+            .select-group {
+                width: 100%;
+                height: 8vh;
+                border-radius: 5px;
+                font-size: 1vw;
+                background-color: white;
+
+                option {
+                    padding: 1rem 0;
+                }
+            }
+
+            .submit {
+                justify-content: end;
+
+                .limpiar {
+                    color: #7525B7;
+                    background-color: white;
+                    font-size: 20;
+                    font-weight: bold;
+                    border: 0;
+                }
+
+                .enviar {
+                    height: 6vh;
+                    width: 10vh;
+                    background-color: #7525B7;
+                    padding: 5px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    border-radius: 25px;
+                    color: white;
+                    float: right;
+                    font-size: 20;
+                    font-weight: 600;
+                    border:0
+                }
+
+            }
+        }
+    }
+}

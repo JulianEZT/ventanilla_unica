@@ -1,0 +1,137 @@
+<div id="space" class="space">
+    hola
+</div>
+<div class="content">
+    <vex-breadcrumbs [crumbs]="[{name: 'PQRS'}]"></vex-breadcrumbs>
+    <div class="pqr">
+        <h1 class="titulo">PQRS</h1>
+        <p class="que-hacemos">
+            Ponemos a tu disposición este canal de comunicación, abierto y dispuesto a cualquier
+            inquietud, queja, petición, reclamo o solicitud
+        </p>
+        <form>
+            <div class="solicitud">
+                <mat-form-field class="select-group" appearance="outline">
+                    <mat-label>Tipo de solicitud</mat-label>
+                    <mat-select class="select" required>
+                        <mat-option value="peticion">Petición</mat-option>
+                        <mat-option value="queja">Queja / Reclamo</mat-option>
+                        <mat-option value="solicitud">Solicitud de información</mat-option>
+                        <mat-option value="sugerencia">Sugerencia / Propuesta</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+            </div>
+            <div>
+                <mat-form-field class="select-group" appearance="outline">
+                    <mat-label>Tipo de solicitante</mat-label>
+                    <mat-select class="select" required [(ngModel)]="solicitud.tipoSolicitante" name="hola">
+                        <mat-option value="apoderado">Apoderado</mat-option>
+                        <mat-option value="infante">Niños, Niñas y adolescentes</mat-option>
+                        <mat-option value="juridica">Persona jurídica</mat-option>
+                        <mat-option value="natural">Persona natural</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <div class="disabled-parent">
+                    <mat-form-field [class.disabled]="solicitud.tipoSolicitante !== 'juridica'" class="input-group"
+                        appearance="outline">
+                        <mat-label>Razón social {{(solicitud.tipoSolicitante !== 'juridica')? '(disabled)':''}}
+                        </mat-label>
+                        <input matInput type="text" [disabled]="solicitud.tipoSolicitante !== 'juridica'"
+                            [required]="solicitud.tipoSolicitante === 'juridica'">
+                    </mat-form-field>
+                </div>
+
+            </div>
+            <div class="disabled-parent">
+                <mat-form-field [class.disabled]="solicitud.tipoSolicitante == 'juridica'" class="input-group"
+                    appearance="outline">
+                    <mat-label>Nombre {{(solicitud.tipoSolicitante == 'juridica')? '(disabled)':''}}</mat-label>
+                    <input matInput type="text" [disabled]="solicitud.tipoSolicitante == 'juridica'"
+                        [required]="solicitud.tipoSolicitante !== 'juridica'">
+                </mat-form-field>
+
+                <mat-form-field class="input-group" appearance="outline">
+                    <mat-label>Apellidos</mat-label>
+                    <input matInput type="text" [required]="solicitud.tipoSolicitante !== 'juridica'"
+                        [disabled]="solicitud.tipoSolicitante == 'juridica'">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field class="select-group" appearance="outline">
+                    <mat-label>Correo electronico</mat-label>
+                    <input matInput type="email" required>
+                </mat-form-field>
+                <mat-form-field class="input-group" appearance="outline">
+                    <mat-label>Telefono</mat-label>
+                    <input matInput type="number" required>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field class="select-group" appearance="outline">
+                    <mat-label>Tipo de documento de identidad</mat-label>
+                    <mat-select class="select" required>
+                        <mat-option value="cedula">Cedula de ciudadanía</mat-option>
+                        <mat-option value="queja">NUIP</mat-option>
+                        <mat-option value="solicitud">Cedula de extranjería</mat-option>
+                        <mat-option value="sugerencia">NIT</mat-option>
+                        <mat-option value="sugerencia">Pasaporte</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field class="input-group" appearance="outline">
+                    <mat-label>Numero de documento de identidad</mat-label>
+                    <input matInput type="text" required>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field class="select-group" appearance="outline">
+                    <mat-label>Cargo</mat-label>
+                    <input matInput type="email" required>
+                </mat-form-field>
+                <mat-form-field class="input-group" appearance="outline">
+                    <mat-label>Dirección</mat-label>
+                    <input matInput type="number" required>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field class="select-group" appearance="outline">
+                    <mat-label>Barrio / Vereda / Corregimiento</mat-label>
+                    <input matInput type="email" required>
+                </mat-form-field>
+                <mat-form-field class="input-group" appearance="outline">
+                    <mat-label>Municipio / Distrito</mat-label>
+                    <input matInput type="number" required>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field class="select-group" appearance="outline">
+                    <mat-label>País</mat-label>
+                    <input matInput type="email" required>
+                </mat-form-field>
+                <mat-form-field class="select-group" appearance="outline">
+                    <mat-label>Medio de respuesta</mat-label>
+                    <mat-select class="select" required>
+                        <mat-option value="cedula">Correo electronico</mat-option>
+                        <mat-option value="queja">Dirección de correspondencia</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field class="textarea-group" appearance="outline">
+                    <mat-label>Comentario / Solicitud</mat-label>
+                    <textarea matInput rows="5"></textarea>
+                </mat-form-field>
+            </div>
+            <div class="terminos">
+                <input type="checkbox"><label style="color: black">Acepto terminos y condiciones para el tratamiento de
+                    datos</label>
+            </div>
+            <div class="submit">
+                <button class="limpiar" (click)="$event.preventDefault()">Limpiar</button>
+                <button class="enviar" (click)="enviar()">Enviar</button>
+            </div>
+        </form>
+
+    </div>
+</div>
